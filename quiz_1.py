@@ -7,7 +7,17 @@ Ex:
     15 -> False
 '''
 def prime(n):
-    return False
+    x=0
+    for i in range(3,n):
+        if n % i==0:
+            x=1
+    if x==0:
+    y=True
+    else:
+    y=False
+
+    return y
+
 
 '''
 Questao 2: (2 pontos)
@@ -18,7 +28,9 @@ Ex:
     [15,15,15,15] -> [15]
 '''
 def unicos(L):
-    return L
+    x=set(L)
+    l=list(x)
+    return l
 
 '''
 Questao 3: (3 pontos)
@@ -33,7 +45,20 @@ Ex:
     (500, 30) -> False
 '''
 def amigavel(ab):
-    return False
+    soma_de_divisores_de_a=0
+    soma_de_divisores_de_b=0
+    for i in range(2,ab[0]):
+        if ab[0] % i==0:
+            soma_de_divisores_de_a=soma_de_divisores_de_a+i
+    for j in range(2,ab[1]):
+        if ab[1] % j==0:
+            soma_de_divisores_de_b=soma_de_divisores_de_b+j
+    if soma_de_divisores_de_b==ab[0] and soma_de_divisores_de_a==ab[1]:
+        y=True
+    else:
+        y=False
+    return y
+
 
 '''
 Questao 4: (3 pontos)
@@ -44,4 +69,10 @@ Ex:
     [5,4,3,2,1] -> [1, 2, 3, 4, 5]
 '''
 def sort(L):
+    n_elementos=len(L)
+    for i in range(n_elementos):
+        while L[i]>L[i+1]:
+            aux=L[i+1]
+            L[i+1]=L[i]
+            L[i]=aux
     return L
