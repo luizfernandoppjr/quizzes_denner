@@ -1,11 +1,15 @@
 def soma(ab):
-    return 0
+    x=ab[0]+ab[1]
+    return x
 
 def sub(ab):
-    return 0
+    y=abs(ab[0]-ab[1])
+    return y
 
 def divisao(ab):
-    return 0
+    z=ab[0]/ab[1]
+    return z
 
 def multiplicacao(ab):
-    return 0
+    w=ab[0]*ab[1]
+    return w
