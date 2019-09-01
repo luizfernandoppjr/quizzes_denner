@@ -12,9 +12,9 @@ def prime(n):
         if n % i==0:
             x=1
     if x==0:
-    y=True
+        y=True
     else:
-    y=False
+        y=False
 
     return y
 
